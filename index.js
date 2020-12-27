@@ -82,7 +82,7 @@ client.on("message", async (message) => {
   }
 });
 
-bot.on('message', message => {
+client.on('message', message => {
   if(message.content.startsWith(prefix + 'servers')) {
     message.channel.send(`Ennyi szerveren vagyok benn : ${message.guilds.cache.size}`)
   }
