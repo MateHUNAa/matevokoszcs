@@ -81,9 +81,3 @@ client.on("message", async (message) => {
     message.reply("There was an error executing that command.").catch(console.error);
   }
 });
-
-client.on('message', message => {
-  if(message.content.startsWith(prefix + 'servers')) {
-    message.channel.send(`Ennyi szerveren vagyok benn : ${message.guilds.cache.size}`)
-  }
-})
