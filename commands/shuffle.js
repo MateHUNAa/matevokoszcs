@@ -3,6 +3,8 @@ const { canModifyQueue } = require("../util/EvobotUtil");
 module.exports = {
   name: "shuffle",
   description: "Shuffle queue",
+  cooldown: 5,
+  aliases: ["shuff"],
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
     if (!queue) return message.channel.send("There is no queue.").catch(console.error);
