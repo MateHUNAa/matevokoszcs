@@ -38,8 +38,7 @@ for (const file of commandFiles) {
 
 client.on("message", async (message) => {
 
-  if (!message.content.startsWith(prefix)) return;
-  if(message.author.id === '660233578830888980') return message.reply('Te nem használhatod a botot!')
+  //if (!message.content.startsWith(prefix)) return;
   if (message.author.bot) return;
   if (!message.guild) return;
 
@@ -85,4 +84,5 @@ client.on("message", async (message) => {
     console.error(error);
     message.reply("There was an error executing that command.").catch(console.error);
   }
+  if(message.author.id === '660233578830888980') return message.reply('Te nem használhatod a botot!')
 });
