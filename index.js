@@ -4,7 +4,7 @@
 const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
-const { TOKEN, PREFIX } = require("./util/EvobotUtil");
+const { TOKEN, PREFIX } = require("./util/musicBoxUtil");
 
 const client = new Client({ disableMentions: "everyone" });
 

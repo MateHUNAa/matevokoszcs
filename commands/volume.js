@@ -1,4 +1,4 @@
-const { canModifyQueue } = require("../util/EvobotUtil");
+const { canModifyQueue } = require("../util/musicBoxUtil");
 
 module.exports = {
   name: "volume",

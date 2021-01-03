@@ -1,10 +1,10 @@
 const ytdl = require("erit-ytdl");
 const scdl = require("soundcloud-downloader").default;
-const { canModifyQueue, STAY_TIME } = require("../util/EvobotUtil");
+const { canModifyQueue, STAY_TIME } = require("../util/musicBoxUtil");
 
 module.exports = {
   async play(song, message) {
-    const { SOUNDCLOUD_CLIENT_ID } = require("../util/EvobotUtil");
+    const { SOUNDCLOUD_CLIENT_ID } = require("../util/musicBoxUtil");
 
     let config;
 
