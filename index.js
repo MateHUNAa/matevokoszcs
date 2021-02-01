@@ -24,7 +24,7 @@ client.on('message', message => {
   if(message.author.bot) return
   if(message.author.id !== '575342593630797825') return message.reply('Ezt csak a ( [ BOT OWNER ] ) használhatja.')
   if(message.content.startsWith(`${PREFIX}restart`)) {
-    channel.send('Resetting...')
+    message.channel.send('Resetting...')
     .then(msg => client.destroy())
     .then(() => client.login(TOKEN));
   }
