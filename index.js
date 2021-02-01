@@ -20,6 +20,14 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 /**
  * Client Events
  */
+client.on('message', message => {
+  if(message.author.id !== '575342593630797825') return message.reply('Ezt csak a ( [ BOT OWNER ] ) használhatja.')
+  if(message.content.startsWith(`${PREFIX}restart`)) {
+    channel.send('Resetting...')
+    .then(msg => client.destroy())
+    .then(() => client.login(TOKEN));
+  }
+});
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
   client.user.setActivity(`${PREFIX}help and ${PREFIX}play`, { type: "LISTENING" });
@@ -86,3 +94,54 @@ client.on("message", async (message) => {
   }
   if(message.author.id === '660233578830888980') return message.reply('Te nem használhatod a botot!')
 });
+/*
+
+    //  EZEK OLYAN PARANCSOK AMIKET CSAK A ( [ BOT OWNER  ] ) TUD HASZNÁLNI . | PARANCSOK CSAK IDEGLENES HIBA JAVÍTÁSRA JÓK (PL: Ha laggol a bot : API restart  ) | vagy : Nem tolti be a youtube zenéket/Status Code: 429 : Restart Con. to Db. |)
+
+const Call_cmd_functions = {
+
+  function('set_theme') {
+    call.function()
+  }
+
+  function('eq') {  //  SIMPLE EQ
+    call.function()
+  }
+
+  function('setserver') {  // Egy szervert adminá teszel és ott leget használni az admin commnadokat. ( [ ONLY ADMIN LEVEL 5 ] )
+    call.function()
+  }
+
+  function('setbotadmin') {  // adminserveren [1] admin -t ki tudsz nevezni!
+    call.function()
+  }
+
+  function('restart_api') {  // API restart
+    call.function()
+  }
+  fun
+  ction('restart_connection') {  // Restart Con. to Db.
+    call.function()
+  }
+
+  function('generate_admin_token') { // Admin login token generate ( [ ONLY BOT OWNER ] )
+    call.function()
+  }
+                                      // Generate_admin_token es login_admin = Eggyütes használat | (Loginkód) random generált code | Grant =  access(AdminLevel(5) = AllBotCommand) | és secret commandok.
+  function('login_admin') {
+    call.function()
+  }
+
+  function('removeserver ') {  // Admin server törlés
+    call.function()
+  }
+
+  function('logout_admin') {  // kijelentkezés az admin mode ból .
+    call.function()
+  }
+
+  //END
+
+}
+
+*/
