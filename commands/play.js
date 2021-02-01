@@ -134,4 +134,5 @@ module.exports = {
       return message.channel.send(`Could not join the channel: ${error}`).catch(console.error);
     }
   }
+
 };
