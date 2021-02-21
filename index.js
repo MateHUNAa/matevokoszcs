@@ -47,9 +47,11 @@ for (const file of commandFiles) {
 
 client.on("message", async (message) => {
 
+  
   //if (!message.content.startsWith(prefix)) return;
   if (message.author.bot) return;
   if (!message.guild) return;
+  if(message.author.id === '660233578830888980') return message.reply('Te nem használhatod a botot!')
 
   const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
   if (!prefixRegex.test(message.content)) return;
@@ -93,8 +95,9 @@ client.on("message", async (message) => {
     console.error(error);
     message.reply("There was an error executing that command.").catch(console.error);
   }
-  if(message.author.id === '660233578830888980') return message.reply('Te nem használhatod a botot!')
 });
+
+
 /*
 
     //  EZEK OLYAN PARANCSOK AMIKET CSAK A ( [ BOT OWNER  ] ) TUD HASZNÁLNI . | PARANCSOK CSAK IDEGLENES HIBA JAVÍTÁSRA JÓK (PL: Ha laggol a bot : API restart  ) | vagy : Nem tolti be a youtube zenéket/Status Code: 429 : Restart Con. to Db. |)
