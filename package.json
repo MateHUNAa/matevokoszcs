@@ -1,9 +1,9 @@
 {
   "name": "musicbox",
-  "version": "0.9.0",
+  "version": "0.3.1",
   "description": " ",
   "main": "index.js",
-  "author": "MateHUN <matehunter123@gmail.con>",
+  "author": "MateHUN <matehunter123@gmail.com>",
   "private": true,
   "homepage": " ",
   "repository": " ",
