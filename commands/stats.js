@@ -16,6 +16,8 @@ var  getpercentage =
 message.channel.send("Memory used in GB " + (usedMemory/ Math.pow(1024, 3)).toFixed(2))
 message.channel.send("Used memory " + getpercentage);
 var os = require('os');
-console.log(chalk.blue(`${os.cpus()}`));
+console.log(os.cpus());
+console.log(os.totalmem());
+console.log(os.freemem())
     }
 };
