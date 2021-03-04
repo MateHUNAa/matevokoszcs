@@ -8,6 +8,8 @@ var os = require('os');
 
 var usedMemory = os.totalmem() -os.freemem(), totalMemory = os.totalmem();
 
+const chalk = require('chalk')
+
 var  getpercentage = 
   ((usedMemory/totalMemory) * 100).toFixed(2) + '%'
 
