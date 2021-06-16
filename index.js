@@ -51,7 +51,6 @@ client.on("message", async (message) => {
   //if (!message.content.startsWith(prefix)) return;
   if (message.author.bot) return;
   if (!message.guild) return;
-  //if(message.author.id === '660233578830888980') return message.reply('Te nem használhatod a botot!')
 
   const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
   if (!prefixRegex.test(message.content)) return;
