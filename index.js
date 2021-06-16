@@ -51,7 +51,7 @@ client.on("message", async (message) => {
   //if (!message.content.startsWith(prefix)) return;
   if (message.author.bot) return;
   if (!message.guild) return;
-  if(message.author.id === '660233578830888980') return message.reply('Te nem használhatod a botot!')
+  //if(message.author.id === '660233578830888980') return message.reply('Te nem használhatod a botot!')
 
   const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
   if (!prefixRegex.test(message.content)) return;
@@ -96,56 +96,3 @@ client.on("message", async (message) => {
     message.reply("There was an error executing that command.").catch(console.error);
   }
 });
-
-
-/*
-
-    //  EZEK OLYAN PARANCSOK AMIKET CSAK A ( [ BOT OWNER  ] ) TUD HASZNÁLNI . | PARANCSOK CSAK IDEGLENES HIBA JAVÍTÁSRA JÓK (PL: Ha laggol a bot : API restart  ) | vagy : Nem tolti be a youtube zenéket/Status Code: 429 : Restart Con. to Db. |)
-
-const Call_cmd_functions = {
-
-  function('set_theme') {
-    call.function()
-  }
-
-  function('eq') {  //  SIMPLE EQ
-    call.function()
-  }
-
-  function('setserver') {  // Egy szervert adminá teszel és ott leget használni az admin commnadokat. ( [ ONLY ADMIN LEVEL 5 ] )
-    call.function()
-  }
-
-  function('setbotadmin') {  // adminserveren [1] admin -t ki tudsz nevezni!
-    call.function()
-  }
-
-  function('restart_api') {  // API restart
-    call.function()
-  }
-  fun
-  ction('restart_connection') {  // Restart Con. to Db.
-    call.function()
-  }
-
-  function('generate_admin_token') { // Admin login token generate ( [ ONLY BOT OWNER ] )
-    call.function()
-  }
-                                      // Generate_admin_token es login_admin = Eggyütes használat | (Loginkód) random generált code | Grant =  access(AdminLevel(5) = AllBotCommand) | és secret commandok.
-  function('login_admin') {
-    call.function()
-  }
-
-  function('removeserver ') {  // Admin server törlés
-    call.function()
-  }
-
-  function('logout_admin') {  // kijelentkezés az admin mode ból .
-    call.function()
-  }
-
-  //END
-
-}
-
-*/
